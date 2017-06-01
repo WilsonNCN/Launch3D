@@ -1,0 +1,71 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	background-color: black;
+}
+
+video {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: 1;
+}
+
+.parent {
+	border: 5px solid #424242;
+	z-index: 2;
+	position: absolute;
+	background: black;
+	margin: 0 auto;
+	top: 180px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 640px;
+	width: 840px;
+	padding: 10px;
+}
+
+.item {
+	margin: 5px;
+	background: transparent;
+	color: white;
+	text-align: center;
+	background-image: url("../files/stop.png");
+}
+
+.item:active {
+	margin: 5px;
+	background: transparent;
+	color: white;
+	text-align: center;
+	background-image: url("../files/stop2.png");
+}
+
+.item2 {
+	margin: 5px;
+	margin-left: 45px;
+	background: transparent;
+	color: white;
+	text-align: center;
+}
+
+/* Flexbox */
+
+.parent {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.item {
+	width: 70px;
+	height: 70px;
+}

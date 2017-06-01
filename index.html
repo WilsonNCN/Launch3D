@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Title</title>
+		<link rel="stylesheet" href="css/style.css">
+
+<script>
+var onImg= "files/button.png";
+var onImg2= "files/button2.png";
+var onImg3= "files/mute.png";
+var onImg4= "files/stop.png";
+var offImg= "files/button3.png";
+</script>
+
+<script>
+
+var audio = [];
+var isPlaying = [];
+
+function manage(id){
+  if(isPlaying[id]){
+    audio[id].pause();
+    isPlaying[id] = false;
+    audio[id].currentTime = 0;
+  }
+  else{
+    audio[id].play();
+    isPlaying[id] = true;
+    audio[id].currentTime = 0;
+  }
+}
+
+function createAudio(src,i){
+  audio[i] = new Audio();
+  audio[i].src = src;
+  audio[i].loop = true;
+  isPlaying[i] = false;
+}
+
+var mySources = ['files/audio/one.wav','files/audio/two.wav','files/audio/three.wav','files/audio/four.wav','files/audio/five.wav',
+				'files/audio/six.wav','files/audio/seven.wav','files/audio/eight.wav'];
+
+for(var i = 1;i<=mySources.length;i++){
+  createAudio(mySources[i],i);}
+
+
+</script>
+
+
+	</head>
+
+<body>
+
+<div class="container">
+	<video poster="files/background.jpg" autoplay="true" loop>
+		<source src="files/background.mp4" type="video/mp4">
+		<source src="files/background.webm" type="video/webm">
+	</video>
+		<div class="example">
+			<div class="example-content">
+
+<!-- Column 1 -->
+
+				<div class="parent">
+
+					<img class="item" src="files/button.png" onclick="manage(1); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(2); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(3); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(4); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(5); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(6); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(7); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="manage(8); this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+
+<!-- Column 2 -->
+
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+
+<!-- Column 3 -->
+
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+
+<!-- Column 4 -->
+
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+
+<!-- Column 5 -->
+
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+
+<!-- Column 6 -->
+
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+
+<!-- Column 7 -->
+
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+					<img class="item" src="files/button.png" onclick="this.src = (this.src.endsWith(offImg)? onImg : offImg);"/>
+
+<!-- Column 8 -->
+
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+					<img class="item" src="files/button2.png" onclick="this.src = (this.src.endsWith(offImg)? onImg2 : offImg);"/>
+
+<!-- Column 9 -->
+
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+					<img class="item2" src="files/mute.png" onclick="this.src = (this.src.endsWith(offImg)? onImg3 : offImg);"/>
+
+<!-- Column 10 -->
+
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+					<div class="item"></div>
+
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+</body>
+</html>
